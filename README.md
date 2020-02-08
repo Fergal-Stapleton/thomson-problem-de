@@ -1,4 +1,4 @@
-# thomson-problem-de
+# Differential Evolution for Thomson Problem
 
 Differential Evolution optimization used to find candidate solutions for the Thomson problem.
 
@@ -10,3 +10,5 @@ potential is at a minimum. Potential in this case is calculated use columb's pot
 The algorithm uses only selection and mutation. It switches between a standard mutation strategy and a strategy with jitter depending on whether the standard deviation of the previous 10 generations have changed or not.
 
 Output plot shows the evaluated potential for the best and worst sphere in each generation and upon completion of the program, the best overall sphere is plotted with its corresponding configuration.
+
+![Candidate configuration for sphere with 12 electrons](/images/example_fig.png)
