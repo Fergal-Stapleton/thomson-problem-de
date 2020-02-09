@@ -41,8 +41,13 @@ def drawSphere(best_mem_current, n):
 		Z = np.cos(best_mem_current[k][0])
 		ax2.scatter(X, Y, Z, color='r')
 
-	plt.show()
+	#import matplotlib.animation as animation
 
+	#def rotate(angle):
+	#	ax2.view_init(azim=angle)
+
+	#rotating_sphere = animation.FuncAnimation(fig2, rotate, frames=np.arange(0, 360, 5), interval=100)
+	#rotating_sphere.save('sphere.gif', dpi=160, writer='imagemagick')
 
 class diff_evolv:
 	def __init__(self, gen_max, pop_num, coordNum, n):

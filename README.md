@@ -2,8 +2,10 @@
 
 Differential Evolution optimization used to find candidate solutions for the Thomson problem.
 
+https://en.wikipedia.org/wiki/Thomson_problem
+
 Thomson problem aims to find configuration for N charges confined to the surface of a sphere where the
-potential is at a minimum. Potential in this case is calculated use columb's potential.
+potential is at a minimum. Potential in this case is calculated use Columb's potential.
 
 ## Detail on algorithm
 
@@ -11,4 +13,4 @@ The algorithm uses only selection and mutation. It switches between a standard m
 
 Output plot shows the evaluated potential for the best and worst sphere in each generation and upon completion of the program, the best overall sphere is plotted with its corresponding configuration.
 
-![Candidate configuration for sphere with 12 electrons](/images/example_fig.png)
+![Candidate configuration for sphere with 12 electrons](/images/sphere.gif)
