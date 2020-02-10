@@ -1,7 +1,7 @@
 import numpy as np
 
-# Columb potential
-def columb_pot(pop, index, n):
+# Coulomb potential
+def coulomb_pot(pop, index, n):
 	potential = 0.0
 	for i in range(n-1):
 		for j in range(i+1,n):

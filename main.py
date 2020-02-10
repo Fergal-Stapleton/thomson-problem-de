@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import time
 from lib.diff_evolution import diff_evolv_3d
 from lib.draw_plot import draw_sphere
-from lib.potential import columb_pot
+from lib.potential import coulomb_pot
 
 def main():
 	# Declare immutable variables
@@ -61,8 +61,8 @@ def main():
 		de.selection(pop_num, n)
 		de.worst_mem_per_gen(pop_num, n)
 
-		best_current_potential = columb_pot(de.pop, de.best_index, n)
-		worst_current_potential = columb_pot(de.pop, de.worst_index, n)
+		best_current_potential = coulomb_pot(de.pop, de.best_index, n)
+		worst_current_potential = coulomb_pot(de.pop, de.worst_index, n)
 
 		print("Best potential after DE: ")
 		print(best_current_potential)
@@ -90,7 +90,7 @@ def main():
 	#Call draw sphere function
 	print("")
 	print("Best Potential Found: ")
-	print(columb_pot(de.pop, de.best_index,n))
+	print(coulomb_pot(de.pop, de.best_index,n))
 	draw_sphere(de.best_mem_current, n)
 
 main()

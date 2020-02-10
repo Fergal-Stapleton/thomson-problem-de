@@ -1,6 +1,6 @@
 import numpy as np
 import random
-from lib.potential import columb_pot
+from lib.potential import coulomb_pot
 
 class diff_evolv_3d:
 	def __init__(self, gen_max, pop_num, coordNum, n):
@@ -42,7 +42,7 @@ class diff_evolv_3d:
 				self.pop[index][k+1][0] = np.arccos(2*u-1) # Phi value
 				v = random.uniform(0, 1)
 				self.pop[index][k+1][1] = 2*np.pi*v # Theta value
-			self.feval[index] = columb_pot(self.pop, index, n)
+			self.feval[index] = coulomb_pot(self.pop, index, n)
 
 	def best_mem_init_eval(self, pop_num):
 		self.val[1] = self.feval[self.best_index] # function evaluation - Potential function
@@ -59,7 +59,7 @@ class diff_evolv_3d:
 
 	def worst_mem_per_gen(self, pop_num, n):
 		for index in range(pop_num):
-			self.feval[index] = columb_pot(self.pop, index, n)
+			self.feval[index] = coulomb_pot(self.pop, index, n)
 			self.worst_index = 1
 			self.val[1] = self.feval[self.worst_index]
 			self.worst_val = self.val[1]
@@ -128,7 +128,7 @@ class diff_evolv_3d:
 
 	def selection(self, pop_num, n):
 		for index in range(pop_num):
-			self.feval[index] = columb_pot(self.new_pop, index, n)
+			self.feval[index] = coulomb_pot(self.new_pop, index, n)
 			self.tempval = self.feval[index] # check cost of competitor
 			if (self.tempval < self.val[index]):
 				self.pop[index] = self.new_pop[index];  # replace old vector with new one (for new iteration)
@@ -142,7 +142,7 @@ class diff_evolv_3d:
 	def pop_sort(self, pop_num, n):
 		for index in range(pop_num):
 			## for k = 1:pop_num
-			self.feval[index] = columb_pot(self.pop, index, n)
+			self.feval[index] = coulomb_pot(self.pop, index, n)
 
 		# Sort best 10% of population members to retain into next generation
 		pop_retain = int(np.ceil(0.1*pop_num))
